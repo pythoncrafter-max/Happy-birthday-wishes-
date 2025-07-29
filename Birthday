@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Shashank 🎂</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .options {
+      margin-top: 30px;
+    }
+    button {
+      background-color: #fff;
+      color: #2575fc;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #eee;
+      transform: scale(1.05);
+    }
+    .message {
+      margin-top: 40px;
+      font-size: 1.8em;
+      display: none;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Birthday Wish Game 🎁</h1>
+  <p>Choose how you want to wish <strong>Shashank</strong>:</p>
+
+  <div class="options">
+    <button onclick="showMessage(1)">🎉 Fun Style</button>
+    <button onclick="showMessage(2)">❤️ Emotional</button>
+    <button onclick="showMessage(3)">😂 Meme Style</button>
+  </div>
+
+  <div id="birthday-message" class="message"></div>
+
+  <script>
+    function showMessage(option) {
+      const msgBox = document.getElementById('birthday-message');
+      let message = "";
+
+      switch(option) {
+        case 1:
+          message = "🎊 Happy Birthday Shashank! May your life be filled with fun, laughter, and amazing memories! 🎈";
+          break;
+        case 2:
+          message = "💖 Shashank, on your special day, know that you're deeply appreciated and loved. Wishing you endless joy and success. Happy Birthday! 🌟";
+          break;
+        case 3:
+          message = "😂 Shashank, you're now officially one year closer to being that uncle who tells the same story 5 times. Happy Birthday bro! 🎂🤣";
+          break;
+      }
+
+      msgBox.textContent = message;
+      msgBox.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
